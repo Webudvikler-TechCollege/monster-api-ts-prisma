@@ -1,0 +1,8 @@
+"id","name","slug","image","description","price","stock","isActive","createdAt"
+1,"Monster Ultra","monster-ultra","ultra.png","Mindre sød, lettere smag og uden kalorier",20.00,8,1,"2025-08-01 12:17:43.379"
+2,"Monster Ultra Paradise","monster-ultra-paradise","paradise.png","Kiwi-lime med spor af agurkesmag",20.00,12,1,"2025-08-01 14:22:05.591"
+3,"Ultra Fiesta Mango","ultra-fiesta-mango","fiesta-mango.png","Cool Mango",20.00,15,1,"2025-08-01 14:23:15.550"
+4,"Ultra Golden Pineapple","ultra-gold","ultra-gold.png","Forfriskende gylden ananas",22.50,5,1,"2025-08-01 14:27:38.402"
+5,"Monster Ultra Watermelon","ultra-watermelon","watermelon.png","Forfriskende vandmelonsmag",20.00,24,1,"2025-08-01 14:30:39.023"
+6,"Monster Ultra Rosa","ultra-rosa","ultra-rosa.png","Bright and Sweet",20.00,32,1,"2025-08-01 14:32:39.926"
+7,"Monster Ultra Peachy Keen","ultra-peachy","ultra-peachy.png","Refreshing Peach",20.00,12,1,"2025-08-01 14:34:51.242"

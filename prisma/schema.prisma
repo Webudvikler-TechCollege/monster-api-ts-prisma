@@ -1,0 +1,56 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           Int     @id @default(autoincrement()) // -> Primary Key med auto optælling
+  name         String  @default("Ikke navngivet")
+  email        String  @unique // -> Unik værdi
+  password     String
+  description  String
+  image        String
+  refreshToken String
+  isActive     Boolean @default(true) // -> Bool med default true
+
+  favorites Favorite[] // -> Mange til een relation 
+
+  @@map("users") // -> Navn på tabel
+}
+
+model Product {
+  id          Int      @id @default(autoincrement())
+  name        String
+  slug        String
+  image       String
+  description String   @db.Text // -> Lang tekst
+  price       Decimal  @db.Decimal(10, 2) // -> Decimaltal til pris
+  stock       Int
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now()) // -> Datotid
+
+  favorites Favorite[]
+
+  @@map("products")
+}
+
+model Favorite {
+  id        Int @id @default(autoincrement())
+  userId    Int
+  productId Int
+
+  user    User    @relation(fields: [userId], references: [id]) // -> Een til mange relation
+  product Product @relation(fields: [productId], references: [id])
+
+  @@map("favorites")
+}
