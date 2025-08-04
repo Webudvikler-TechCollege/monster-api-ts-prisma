@@ -18,8 +18,8 @@ model User {
   name         String  @default("Ikke navngivet")
   email        String  @unique // -> Unik værdi
   password     String
-  description  String
-  image        String
+  description  String? @db.Text
+  image        String?
   refreshToken String
   isActive     Boolean @default(true) // -> Bool med default true
 

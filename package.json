@@ -10,6 +10,7 @@
     "push": "prisma db push && prisma db seed",
     "prepare": "prisma generate",
     "migrate": "prisma migrate dev",
+    "reset": "prisma migrate reset",
     "seed": "prisma db seed"
   },
   "keywords": [],

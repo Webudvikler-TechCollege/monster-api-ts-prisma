@@ -4,6 +4,7 @@ import cors from 'cors';
 import { userRoutes } from './routes/userRoutes';
 import { productRoutes } from './routes/productRoutes';
 import { authRoutes } from './routes/authRoutes';
+import { favoriteRoutes } from './routes/favoriteRoutes';
 
 dotenv.config();
 const app = express();
@@ -14,6 +15,7 @@ app.use(cors())
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/products', productRoutes);
+app.use('/api/favorites', favoriteRoutes);
 
 app.listen(3000, () => {
   console.log('Server running on http://localhost:3000');

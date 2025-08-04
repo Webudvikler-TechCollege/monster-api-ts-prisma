@@ -8,7 +8,8 @@ export const getRecords = async (req: Request, res: Response) => {
       select: {
         id: true,
         name: true,
-        email: true
+        email: true,
+        image: true
       }
     });
     res.json(users);
@@ -27,7 +28,6 @@ export const getRecord = async (req: Request, res: Response) => {
         id: true,
         name: true,
         email: true,
-        description: true,
         image: true,
         isActive: true
       }
