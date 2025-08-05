@@ -58,8 +58,8 @@ export const Authorize = async (req: Request, res: Response, next: NextFunction)
       } catch (err) {
         return res.status(403).json({ message: "Refresh token invalid or expired" });
       }
+    } else {
+      return res.status(403).json({ message: error.message });
     }
-
-    return res.status(403).json({ message: error.message });
   }
 };
