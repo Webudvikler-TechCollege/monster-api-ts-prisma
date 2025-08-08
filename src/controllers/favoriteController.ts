@@ -38,7 +38,7 @@ export const createRecord = async (req: Request, res: Response) => {
     const favorite = await prisma.favorite.create({
       data: {
         productId: Number(productId),
-        userId
+        userId: Number(userId)
       },
     });
     res.status(201).json(favorite);

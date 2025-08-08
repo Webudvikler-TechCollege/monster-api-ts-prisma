@@ -6,6 +6,7 @@ export const getRecords = async (req: Request, res: Response) => {
   try {
     const data = await prisma.product.findMany({
       select: {
+        id: true,
         name: true,
         image: true,
         price: true,
